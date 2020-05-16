@@ -1,7 +1,119 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
+    background-color: whitesmoke;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px #343a4023;
+}
+
+#logo:hover {
+    color: white;
+}
+
+.navbar .menu {
+    float: right;
+}
+
+.navbar .btn {
+    font-size: 16px;
+    color: white;
+}
+
+.navbar .btn:hover {
+    color: rgb(218, 218, 218);
+    transition: all .1s;
+}
+
+.jumbotron {
+    transition: all .3s ease-out;
+    background: #95afc0;
+}
+
+.jumbotron.fail {
+    transition: all .3s ease-out;
+    background: #eb4d4b;
+}
+
+.jumbotron.success {
+    transition: all .3s ease-out;
+    background: #6ab04c;
+}
+
+.jumbotron p {
+    opacity: 1;
+    transition: all .5s;
+}
+
+.jumbotron p.hide {
+    opacity: 0;
+}
+
+.jumbotron .btn {
+    background-color: whitesmoke;
+    font-weight: 700;
+    box-shadow: 2px 2px 4px #343a4017 !important;
+    border: 0px solid #343a40;
+    color: #343a40e3; 
+}
+
+.jumbotron .btn:hover {
+    background-color: #343a40e3;
+    color: white;
+    transition: all .2s;
 }
 
 .display-4 {
-    font-weight: 400;
+    text-shadow: 2px 2px 5px #343a4015;
+    font-size: 80px;
+    color: white;
+    font-weight: 700;
 }
+
+.lead {
+    text-shadow: 2px 2px 5px #343a400e;
+    color: white;
+}
+
+#question {
+    font-weight: 700;
+    color: #343a40e3;
+    font-size: 24px;
+    text-align: center;
+}
+
+pre {
+    width: fit-content;
+    margin: auto !important;
+    margin-bottom: 3% !important;
+}
+
+#answers .btn {
+    background-color: white;
+    font-weight: 700;
+    box-shadow: 2px 2px 4px #343a4017 !important;
+    border: 0px solid #343a40;
+    color: #343a40e3;
+    margin: .5%;
+}
+
+#answers .btn:hover {
+    background-color: #343a40e3;
+    color: white;
+    margin: .5%;
+    transition: all .2;
+}
+
+#answers .btn.bingo {
+    background-color: #6ab04c !important;
+    color: white;
+}
+
+#answers .btn.non-bingo {
+    background: #eb4d4b;
+    color: white;
+}
+
+
+
+

@@ -2,25 +2,44 @@
 <html>
 
 <head>
-    <title>WEB QUIZ</title>
+    <title>Web Quiz</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar bg-dark navbar-dark">
+    <nav class="navbar bg-dark">
         <div class="container">
-            <a href="#" class="navbar-brand"><i class="fas fa-code mr-2"></i>WEB Quiz</a>
+            <button class="btn" id="logo"><i class="fas fa-search"></i> WEB Quiz</button>
+            <div class="menu">
+                <button class="btn" class="menu">About</button>
+                <button class="btn" class="menu">Contact</button>
+            </div>
         </div>
     </nav>
 
     <div class="jumbotron jumbotron-fluid text-center p-3">
         <h1 class="display-4">WEB Quiz</h1>
         <p class="lead">Learning is never too late. Test your knowledge.</p>
-        <a href="#" class="btn btn-light">Random Question</a>
+        <button class="btn btn-outline-dark">Random Question</button>
     </div>
+
+    <div class="container" id="quiz">
+        <p id="question"></p>
+        <pre><code></code></pre>
+        <div id="answers" class="bingo d-flex flex-column align-items-center">
+
+        </div>
+    </div>
+
+    <script src='js/lib/prism.js'></script>
+    <script src='js/lib/jquery-3.5.1.min.js'></script>
+    <script src='js/data.js'></script>
+    <script src='js/script.js'></script>
 </body>
 
 </html>
