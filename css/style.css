@@ -148,6 +148,11 @@ footer i {
     color: #343a40;
 }
 
+footer i:hover {
+    transition: opacity .2s;
+    opacity: 1;
+}
+
 
 
 
