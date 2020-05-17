@@ -48,16 +48,6 @@ body {
     font-size: 16px !important;
 }
 
-/* .container #about p,li,ul {
-    color: 
-}
-
-#about p,li,ul {
-    margin: 0 !important;
-    font-size: 18px !important;
-    color: black !important;
-} */
-
 .jumbotron {
     transition: all .3s ease-out;
     background: #95afc0;
