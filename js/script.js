@@ -22,7 +22,9 @@ function renderQuizCard(question, code, language, answers) {
 function pickCard(bingo) {
     // checking the selected answer
     $('#answers button').on('click', function () {
+        $("#about").slideUp();
         if ($(this).text() === bingo) {
+            $('#about').css('background', 'linear-gradient(to bottom, #343a40, #6ab04c)')
             $(this).addClass('bingo')
             $('.jumbotron').addClass('success')
             // disable functionallity of buttons
@@ -39,6 +41,7 @@ function pickCard(bingo) {
             }, 200)
         }
         else {
+            $('#about').css('background', 'linear-gradient(to bottom, #343a40, #eb4d4b)')
             $(this).addClass('non-bingo')
             $('.jumbotron').addClass('fail')
 
@@ -67,6 +70,8 @@ function newQuizCard() {
 
 function randomButton() {
     $('.jumbotron button').on('click', function () {
+        $('#about').css('background', 'linear-gradient(to bottom, #343a40, #95afc0)')
+        $("#about").slideUp();
         $('.jumbotron').removeClass('success fail')
         $('.jumbotron p').text('Learning is never too late. Test your knowledge.')
         $('#answers').empty()
@@ -75,5 +80,19 @@ function randomButton() {
     })
 }
 
+function showAbout() {
+    $(document).ready(function () {
+        $('button:contains("About")').click(function () { // задаем функцию при нажатиии на элемент с классом hide
+            $("#about").slideToggle(); // плавно скрываем все элементы <div>
+        });
+    });
+
+
+    // $('button:contains("About")').on('click', function() {
+    //     $('#about').toggle()
+    // })
+}
+
 randomButton()
 newQuizCard()
+showAbout()
