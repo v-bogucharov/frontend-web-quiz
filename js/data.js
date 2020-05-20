@@ -205,8 +205,8 @@ quizData = [
         question: "What will the above code print out?",
         code: 
         `var c = 4;
-        bar( );
-        function bar( ) {
+        bar();
+        function bar() {
         \tc = 5;
         \treturn;
         \tvar c;
