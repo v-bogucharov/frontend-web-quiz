@@ -78,17 +78,17 @@ quizData = [
         bingo: 'the $ sign'
     },
     {
-        question: 'What does $("div") select?',
+        question: 'What does <span class="text-span"> $("div") </span> select?',
         answers: [
             'All div elements',
             'The first div element',
-            'An element with id "div"', 
+            'An element with id "div"',
             'An element with class "div"'
         ],
         bingo: 'All div elements'
     },
     {
-        question: 'What is the correct jQuery code to set the background color of all p elements to red?',
+        question: 'What is the correct jQuery code to set the background color of all <span class="text-span"> p </span> elements to red?',
         answers: [
             '$("p").css("background-color","red");',
             '$("p").manipulate("background-color","red");',
@@ -98,7 +98,7 @@ quizData = [
         bingo: '$("p").css("background-color","red");'
     },
     {
-        question: 'What does $("div.intro") select?',
+        question: 'What does <span class="text-span"> $("div.intro") </span> select?',
         answers: [
             'All div elements with id="intro"',
             'The first div element with id="intro"',
@@ -110,12 +110,12 @@ quizData = [
     {
         question: 'Which jQuery method is used to hide selected elements?',
         answers: [
-            'hidden()',
+            'hidden( )',
             'visible(false)',
-            'hide()',
+            'hide( )',
             'display(none)'
         ],
-        bingo: 'hide()'
+        bingo: 'hide( )'
     },
     {
         question: 'What is the newest version of HTML being developed?',
@@ -151,6 +151,136 @@ quizData = [
         ).replace(/  +/g, ''),
         answers: ['3', '4', '5', '6'],
         bingo: '5'
-    }
+    },
+    {
+        question: 'Which of the following will evaluate as true?',
+        code: (
+            `1. '23' === 23
+            2. true && false
+            3. !(true || false)
+            4. '7' == 7
+        `).replace(/  +/g, ''),
+        answers: ['1', '2', '3', '4'],
+        bingo: '4'
+    },
+    {
+        question: 'Which character or set of characters can be used to make a single-line comment in Javascript?',
+        answers: ['#', '//', '||', '--'],
+        bingo: '//'
+    },
+    {
+        question: 'What do you expect the above code will print out to the console respectively?',
+        code: (
+            `var a = 3;
+            var b = 10;
+            function outer( ) {
+                \tvar a = 1;
+                \tfunction inner( ) {
+                    \t\tvar b = 2;
+                    \t\tconsole.log(a + b);
+                \t}
+                \tinner( );
+                \tconsole.log(a);
+            }
+            console.log(a);
+            outer( );
+            console.log(b)`
+        ).replace(/  +/g, ''),
+        answers: ['3, 3, 1, 10', '1, 3, 1, 2', '3, 13, 1, 10', 'undefiened, 3, 1, undefined'],
+        bingo: '3, 3, 1, 10'
+    },
+    {
+        question: 'Which of the following will evaluate as false?',
+        code: (
+            `1. typeof true == 'boolean'
+            2. typeof 'hey' == 'string'
+            3. typeof 'undefined' == 'undefined'
+            4. typeof null == 'object'
+            `
+        ).replace(/  +/g, ''),
+        answers: ['1', '2', '3', '4'],
+        bingo: '3'
+    },
+    {
+        question: "What will the above code print out?",
+        code: 
+        `var c = 4;
+        bar( );
+        function bar( ) {
+        \tc = 5;
+        \treturn;
+        \tvar c;
+        }
+        console.log(c);
+        `.replace(/  +/g, ''),
+        answers: ['4', '5', 'undefined', 'null'],
+        bingo: '4'
+    },
+    {
+        question: "Which of the following is an example of the use of ternary operator which can be used to shorten <span class='text-span'> if..else </span> statements?",
+        answers: [
+            '(x == 2) ? doSomething( ) : doAnotherThing( )',
+            'x == 2 && doSomething( )',
+            'x == 2 || doSomething( )',
+            'if (x == 2) {doSomething( )}'
+        ],
+        bingo: '(x == 2) ? doSomething( ) : doAnotherThing( )'
+    },
+    {
+        question: "What is the output of the code above?",
+        code: (
+            `console.log(2 + '2')
+            console.log(2 - '2')
+            `.replace(/  +/g, '')
+        ),
+        answers: [
+            '4, 0', 
+            '22, 22', 
+            '22, 0', 
+            'The first output is 22, the second will show an error'
+        ],
+        bingo: '22, 0'
+    },
+    {
+        question: "What is the output of the code above?",
+        code: (
+            `console.log(5 < 6 < 7)
+            console.log(7 > 6 > 5)
+            `.replace(/  +/g, '')
+        ),
+        answers: [
+            'true, true', 
+            'false, false', 
+            'true, false', 
+            'false, true'
+        ],
+        bingo: 'true, false'
+    },
+    {
+        question: "What is the output of the code above?",
+        code: (
+            `console.log(Math.max())`.replace(/  +/g, '')
+        ),
+        answers: [
+            'Infinity',
+            '-Infinity',
+            'undefined',
+            'null'
+        ],
+        bingo: '-Infinity'
+    },
+    {
+        question: "What is the output of the code above?",
+        code: (
+            "function a() { \n\treturn 'hello'; \n} \nconst sentence = a `hi`;\nconsole.log(sentence)".replace(/  +/g, '')
+        ),
+        answers: [
+            'hello',
+            'hi',
+            'hihello',
+            'hellohi'
+        ],
+        bingo: 'hello'
+    },
 ]
 

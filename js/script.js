@@ -1,6 +1,6 @@
 function renderQuizCard(question, code, language, answers) {
     // render question
-    $('#question').text(question)
+    $('#question').html(question)
 
     // render code if exists
     if (code) {

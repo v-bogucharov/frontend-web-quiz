@@ -115,8 +115,8 @@ pre {
 
 code {
     border-radius: 5px;
-    /* background-color: #343a40 !important; */
     letter-spacing: 1px;
+    padding-right: 50px !important;
 }
 
 #answers .btn {
@@ -143,6 +143,17 @@ code {
 #answers .btn.non-bingo {
     background: #eb4d4b;
     color: white;
+}
+
+footer .container {
+    margin-top: 50px
+}
+
+span.text-span {
+    color: white;
+    background: #343a40de;
+    border-radius: 4px;
+    white-space: pre;
 }
 
 footer {
