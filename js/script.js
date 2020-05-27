@@ -1,4 +1,4 @@
-function renderQuizCard(question, code, language, answers) {
+function renderQuizCard(question, code, answers, answers_code) {
     // render question
     $('#question').html(question)
 
@@ -16,6 +16,9 @@ function renderQuizCard(question, code, language, answers) {
     $('#answers button').each(function (index) {
         $(this).text(answers[index])
         $(this).addClass('btn')
+        if (answers_code) {
+            $(this).addClass('answer-code')
+        }
     })
 }
 
@@ -60,11 +63,11 @@ function newQuizCard() {
     let randomCard = quizData[Math.floor(Math.random() * quizData.length)]
     let question = randomCard['question']
     let code = randomCard['code']
-    let language = randomCard['language']
     let answers = randomCard['answers']
+    let answers_code = randomCard['answers_code']
     let bingo = randomCard['bingo']
 
-    renderQuizCard(question, code, language, answers)
+    renderQuizCard(question, code, answers, answers_code)
     pickCard(bingo)
 }
 

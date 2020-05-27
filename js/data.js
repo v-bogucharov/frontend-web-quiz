@@ -19,13 +19,19 @@ successText = [
 quizData = [
     {
         question: 'What is the correct HTML tag for the largest heading?',
-        answers: ['<heading>', '<h6>', '<head>', '<h1>'],
-        bingo: '<h1>'
+        answers: [
+            '<heading>', 
+            '<h6>', 
+            '<head>', 
+            '<h1>'],
+        bingo: '<h1>',
+        answers_code: true
     },
     {
         question: 'What is the correct HTML tag for inserting a line break?',
         answers: ['<br>', '<lb>', '<break>'],
-        bingo: '<br>'
+        bingo: '<br>',
+        answers_code: true
     },
     {
         question: 'What is the correct HTML for creating a hyperlink?',
@@ -35,7 +41,8 @@ quizData = [
             '<a href="http://www.github.com">Github.com</a>',
             '<a>http://www.github.com</a>'
         ],
-        bingo: '<a href="http://www.github.com">Github.com</a>'
+        bingo: '<a href="http://www.github.com">Github.com</a>',
+        answers_code: true
     },
     {
         question: 'What is the correct HTML for inserting an image?',
@@ -45,7 +52,8 @@ quizData = [
             '<image src="image.gif" alt="MyImage">',
             '<img href="image.gif" alt="MyImage">'
         ],
-        bingo: '<img src="image.gif" alt="MyImage">'
+        bingo: '<img src="image.gif" alt="MyImage">',
+        answers_code: true
     },
     {
         question: 'How can you make a numbered list?',
@@ -55,7 +63,8 @@ quizData = [
             '<dl>',
             '<list>'
         ],
-        bingo: '<ol>'
+        bingo: '<ol>',
+        answers_code: true
     },
     {
         question: 'What is the correct HTML for making a checkbox?',
@@ -70,15 +79,15 @@ quizData = [
     {
         question: 'Which sign is a valid identifier of an alias for jQuery?',
         answers: [
-            'the * sign',
-            'the ! sign',
-            'the # sign',
-            'the $ sign'
+            '*',
+            '!',
+            '#',
+            '$'
         ],
-        bingo: 'the $ sign'
+        bingo: '$',
     },
     {
-        question: 'What does <span class="text-span"> $("div") </span> select?',
+        question: 'What does $("div") select?',
         answers: [
             'All div elements',
             'The first div element',
